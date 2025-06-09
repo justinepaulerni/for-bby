@@ -14,11 +14,12 @@
 
   <!-- Password Screen -->
   <div class="password-screen">
-    <h1>Hey 👀</h1>
-    <p>This page is for someone *very* special.</p>
+    <h1>hey 👀</h1>
+    <p>this page is for someone *very* special.</p>
     <input type="password" id="password-input" placeholder="Enter the secret password" />
     <button onclick="checkPassword()">Enter</button>
     <p id="error-msg" class="error-msg"></p>
+    <p id="clue-msg" class="clue-msg"></p>
   </div>
 
   <!-- Hidden Main Content -->
@@ -79,6 +80,7 @@
         document.getElementById("bgm").play().catch(() => {});
       } else {
         document.getElementById("error-msg").textContent = "EENG ❌🙅‍♂️🚨";
+        document.getElementById("clue-msg").textContent = "clue: ☁️🥥";
       }
     }
 

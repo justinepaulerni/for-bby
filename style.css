@@ -102,6 +102,10 @@
     margin-top: 10px;
     color: red;
   }
+
+  .clue-msg {
+    font-weight: bold;
+  }
   
   /* MOBILE OPTIMIZATION */
   @media (max-width: 600px) {
