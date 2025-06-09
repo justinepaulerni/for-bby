@@ -1,0 +1,125 @@
+/* RESET + BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #fde2f3;
+    color: #333;
+  }
+  
+  /* SECTION STYLING */
+  section {
+    padding: 3rem 1.5rem;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* SPLASH SCREEN */
+  .splash-screen {
+    background-color: #fde2f3;
+  }
+  
+  .splash-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .splash-screen p {
+    font-size: 1.25rem;
+    color: #555;
+  }
+  
+  /* LETTER SECTIONS */
+  .letter-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+  }
+  
+  .letter-section p,
+  .letter-section ol {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .letter-section ol {
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    background-color: #fce4f7;
+    color: #666;
+  }
+  
+  /* PASSWORD SCREEN */
+  .password-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff0f6;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .password-screen input,
+  .password-screen button {
+    margin-top: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ffb3d1;
+    width: 100%;
+  }
+  
+  .password-screen button {
+    background-color: #ffb3d1;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .error-msg {
+    margin-top: 10px;
+    color: red;
+  }
+  
+  /* MOBILE OPTIMIZATION */
+  @media (max-width: 600px) {
+    .splash-screen h1 {
+      font-size: 2rem;
+    }
+  
+    .splash-screen p {
+      font-size: 1rem;
+    }
+  
+    .letter-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .letter-section p,
+    .letter-section ol {
+      font-size: 1rem;
+    }
+  }
+  

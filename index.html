@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hi Babe 😎💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgm" src="the cat from ipanema.mp3" loop></audio>
+
+  <!-- Password Screen -->
+  <div class="password-screen">
+    <h1>Hey 👀</h1>
+    <p>This page is for someone *very* special.</p>
+    <input type="password" id="password-input" placeholder="Enter the secret password" />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error-msg" class="error-msg"></p>
+  </div>
+
+  <!-- Hidden Main Content -->
+  <div class="main-content" style="display: none;">
+    <!-- Splash Header -->
+    <section class="splash-screen">
+      <h1>HI BBY 😎💖</h1>
+      <p>This is your <em>super serious</em> anniversary letter</p>
+    </section>
+
+    <!-- Letter Sections -->
+    <section class="letter-section">
+      <h2>💌 How We Met</h2>
+      <p>
+        [Edit this with your memey and sweet intro...]
+      </p>
+    </section>
+
+    <section class="letter-section">
+      <h2>😂 Remember When...</h2>
+      <p>
+        [Add an inside joke or funny moment you always bring up]
+      </p>
+    </section>
+
+    <section class="letter-section">
+      <h2>🥺 Top 5 Reasons You're Goated</h2>
+      <ol>
+        <li>[Reason #1]</li>
+        <li>[Reason #2]</li>
+        <li>[Reason #3]</li>
+        <li>[Reason #4]</li>
+        <li>[Reason #5]</li>
+      </ol>
+    </section>
+
+    <section class="letter-section">
+      <h2>💖 The Ending (But Not Really)</h2>
+      <p>
+        [End this with a heart-melting message and a dash of silliness.]
+      </p>
+    </section>
+
+    <footer>
+      <p>Made with 😎 and 💗 by you.</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const PASSWORD = "coco"; // Change this to your secret password
+
+    function checkPassword() {
+      const input = document.getElementById("password-input").value;
+      if (input === PASSWORD) {
+        document.querySelector(".password-screen").style.display = "none";
+        document.querySelector(".main-content").style.display = "block";
+        document.getElementById("bgm").play().catch(() => {});
+      } else {
+        document.getElementById("error-msg").textContent = "Nope! Try again 🫢";
+      }
+    }
+
+    // Allow pressing Enter to submit
+    document.getElementById("password-input").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") checkPassword();
+    });
+
+    // Play BGM after first user interaction (autoplay restriction workaround)
+    window.addEventListener("click", () => {
+      const audio = document.getElementById("bgm");
+      if (audio.paused) {
+        audio.play().catch((e) => {
+          console.log("Autoplay failed:", e);
+        });
+      }
+    }, { once: true });
+  </script>
+
+</body>
+</html>
